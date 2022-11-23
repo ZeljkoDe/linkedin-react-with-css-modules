@@ -1,9 +1,14 @@
-import style from './style.module.css';
+import styles from './Style.module.css';
 
 export default function Smoke() {
 	return (
-		<div>
-			<h1>Smoke</h1>
+		<div className={styles.smoke}>
+			<video
+				autoPlay
+				loop
+				className={styles.video}
+				src='/assets/smoke.mov'
+			></video>
 		</div>
 	);
 }

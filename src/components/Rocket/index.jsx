@@ -1,9 +1,9 @@
-import style from './style.module.css';
+import styles from './Style.module.css';
 
 export default function Rocket() {
 	return (
 		<div>
-			<h1>Rocket</h1>
+			<img className={styles.img} src='/assets/shuttle.png' alt='' />
 		</div>
 	);
 }

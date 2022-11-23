@@ -1,9 +1,11 @@
-import style from './style.module.css';
+import styles from './Style.module.css';
 
 export default function Background() {
 	return (
 		<div>
-			<h1>Background</h1>
+			<div className={styles.stars}></div>
+			<div className={styles.alpha}></div>
+			<div className={styles.nebula}></div>
 		</div>
 	);
 }

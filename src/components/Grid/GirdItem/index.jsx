@@ -1,9 +1,19 @@
-import style from './style.module.css';
+import { useState } from 'react';
+import Badge from '../Badge';
+import Explorer from '../Explorer';
+import styles from './Style.module.css';
 
-export default function GridItem() {
+export default function GridItem({ content }) {
+	const [clicked, setClicked] = useState(content.clicked);
+
+	const handleClick = () => {
+		setClicked(!clicked);
+	};
 	return (
-		<div>
-			<h1>GridItem</h1>
+		<div className={styles.card} onClick={handleClick}>
+			{clicked ? <Explorer /> : <Badge />}
+			<h2 className={styles.title}>{content.title}</h2>
+			<article className={styles.fact}>{content.fact}</article>
 		</div>
 	);
 }
